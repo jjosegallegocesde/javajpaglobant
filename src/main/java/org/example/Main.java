@@ -1,6 +1,7 @@
 package org.example;
 
 
+import org.example.controladores.ControladorAfiliado;
 import org.example.entidades.Usuario;
 
 import java.util.Scanner;
@@ -10,12 +11,11 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner teclado= new Scanner(System.in);
-        Usuario objetoUsuario=new Usuario();
 
-        System.out.print("Digite sus nombres y apellidos: ");
-        objetoUsuario.setNombres(teclado.nextLine());
+        ControladorAfiliado controladorAfiliado= new ControladorAfiliado();
+        //llamar al metodo para registrar un afiliado
+        controladorAfiliado.registrarAfiliado("juanjosegallego","1234567890","juan@gmail.com",4);
 
-        System.out.println("su nombre es: "+objetoUsuario.getNombres());
 
 
     }
