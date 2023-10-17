@@ -14,8 +14,16 @@ public class Main {
 
         ControladorAfiliado controladorAfiliado= new ControladorAfiliado();
         //llamar al metodo para registrar un afiliado
-        controladorAfiliado.registrarAfiliado("juanjosegallego","1234567890","juan@gmail.com",4);
+        //controladorAfiliado.registrarAfiliado("juanjosegallego","1234567890","juan@gmail.com",4);
 
+        //construir un menu de ocpiones
+        //1. registrar afiliado
+        //2. ver afiliados
+        //3. registrar afiliado evento
+        //4. ver afiliadoseventos
+
+        //llamar al controaldor para consultar los afiliados
+        controladorAfiliado.consultarAfiliados();
 
 
     }

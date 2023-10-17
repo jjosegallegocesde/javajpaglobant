@@ -1,7 +1,10 @@
 package org.example.controladores;
 
 import org.example.entidades.UsuarioMembresia;
+import org.example.modelosdatos.ModeloUsuarioAfiliado;
 import org.example.servicios.ServicioAfiliado;
+
+import java.util.List;
 
 public class ControladorAfiliado {
 
@@ -22,6 +25,15 @@ public class ControladorAfiliado {
         //llamo al servicio para guardar los datos
         this.servicioAfiliado.registrarAfiliado(usuarioMembresia);
 
+    }
+
+    public void consultarAfiliados(){
+        List<ModeloUsuarioAfiliado> afiliados=servicioAfiliado.buscarAfiliados();
+        for(ModeloUsuarioAfiliado afiliado: afiliados){
+            System.out.println("Nombre: "+afiliado.getNombres());
+            System.out.println("-------------------");
+
+        }
     }
 
 
